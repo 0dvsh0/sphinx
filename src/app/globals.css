@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/*
+ * ============================================================================
+ * Design tokens
+ * ============================================================================
+ * MIRRORED FROM src/lib/palette.ts - do not edit a value here alone.
+ * `npm run audit:contrast` fails the build if this block and palette.ts drift apart.
+ *
+ * Rationale for each choice: docs/design/kids-ui-charter.md.
+ * Summary: this interface is read outdoors, on a cheap phone, in daylight, at arm's
+ * length, one-handed, by someone who is nine. Washed-out contrast is the failure
+ * mode everything below is designed against.
+ *
+ * System font stack only. No Google Fonts, no CDN. A remote font is a third-party
+ * network call that leaks the child's IP and request path, and it breaks offline use.
+ * Both are non-negotiable. See PROJECT_CONTEXT.md section 4.
+ */
+@theme {
+  /* --- Colour ------------------------------------------------------------ */
+  --color-paper: oklch(0.97 0.008 85);
+  --color-paper-raised: oklch(0.99 0.005 85);
+  --color-ink: oklch(0.22 0.02 260);
+  --color-ink-soft: oklch(0.45 0.015 260);
+  --color-stone: oklch(0.55 0.03 75);
+  --color-stone-deep: oklch(0.38 0.035 70);
+  --color-sand: oklch(0.9 0.03 80);
+  --color-found: oklch(0.42 0.09 150);
+  --color-unsure: oklch(0.45 0.06 250);
+  --color-wrong: oklch(0.48 0.1 25);
+  --color-pocket: oklch(0.14 0.008 260);
+  --color-pocket-ink: oklch(0.62 0.01 260);
+
+  /* --- Type --------------------------------------------------------------
+   * Short scale on purpose: this interface has almost no text. The riddle is the
+   * hero and everything else is quiet.
+   */
+  --text-riddle: 1.75rem;
+  --text-riddle--line-height: 1.45;
+  --text-riddle--letter-spacing: 0.005em;
+  --text-riddle--font-weight: 600;
+
+  --text-reveal-fact: 1.25rem;
+  --text-reveal-fact--line-height: 1.6;
+  --text-reveal-fact--font-weight: 500;
+
+  --text-action: 1.125rem;
+  --text-action--line-height: 1.2;
+  --text-action--letter-spacing: 0.01em;
+  --text-action--font-weight: 600;
+
+  --text-quiet: 0.875rem;
+  --text-quiet--line-height: 1.4;
+  --text-quiet--letter-spacing: 0.01em;
+  --text-quiet--font-weight: 500;
+
+  /* --- Touch targets ------------------------------------------------------
+   * 44px is the WCAG 2.5.5 floor. 56px is our primary action, because the
+   * primary action is the one that must land and a nine-year-old's aim is worse
+   * than an adult's.
+   */
+  --spacing-tap-min: 2.75rem;
+  --spacing-tap-primary: 3.5rem;
+
+  /* --- Motion -------------------------------------------------------------
+   * Opacity and position only. No scale, no bounce, no spin (charter section 9).
+   * 150ms reads as intentional without making a child wait.
+   */
+  --ease-sphinx: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/*
+ * ============================================================================
+ * Dyslexia-friendly spacing
+ * ============================================================================
+ * One class on <html>, applied immediately, persisted by the parent.
+ * SPACING ONLY - we never change letter shapes, because that would need a webfont
+ * we refuse to fetch from a third party.
+ */
+.spacing-relaxed,
+.spacing-relaxed body {
+  letter-spacing: 0.03em;
+  word-spacing: 0.1em;
+}
+.spacing-relaxed .riddle {
+  /* Must be set explicitly here, not just inherited: Tailwind's `--text-riddle--letter-spacing`
+     token applies letter-spacing directly to the element, which beats an inherited value. */
+  letter-spacing: 0.05em;
+  line-height: 1.9;
+  word-spacing: 0.14em;
+}
+.spacing-relaxed .reveal-fact {
+  letter-spacing: 0.04em;
+  line-height: 1.85;
+  word-spacing: 0.12em;
+}
+
+/*
+ * ============================================================================
+ * Reduced motion
+ * ============================================================================
+ * Not a preference here, a requirement: no information in this app is carried by
+ * animation, so removing it entirely must cost nothing.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * ============================================================================
+ * Base
+ * ============================================================================
+ */
+html {
+  /* Stop iOS Safari inflating text in landscape, which breaks the layout. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* No rubber-banding: a hunt is not a scrolling page. */
+  overscroll-behavior-y: none;
+  /* Faint warm tint on the safe area so the notch does not read as a black bar. */
+  min-height: 100dvh;
+}
+
+/*
+ * One shared transition definition. Charter section 9: 150ms, ease-out, opacity
+ * and position only. Used by the riddle/reveal cross-fade and nothing else.
+ */
+.sphinx-fade {
+  transition: opacity 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Minimum 44px on everything tappable, 56px for primary actions. */
+button,
+[role="button"],
+a {
+  touch-action: manipulation;
+}
+
+/*
+ * A visible focus ring is mandatory: the charter requires full keyboard and switch
+ * access, and a child using a switch or keyboard cannot see where they are without
+ * one. Deliberately thick - it has to read in sunlight.
+ */
+:where(button, a, [role="button"]):focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 0.75rem;
+}
