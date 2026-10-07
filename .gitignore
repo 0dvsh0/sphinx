@@ -1,0 +1,25 @@
+node_modules/
+.next/
+out/
+/build/
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# ONNX runtime, copied out of node_modules by `npm run setup:ort`. ~40MB of WASM, and it must not
+# be committed - but it MUST be served from our own origin, because onnxruntime-web otherwise loads
+# it from a CDN, which would be a third-party request from a child's phone.
+public/ort/
+
+# The precomputed visual index IS committed (see scripts/build-visual-index.ts) - it is ~90KB.
+
+# Excluded from git repository
+docs/
+scripts/

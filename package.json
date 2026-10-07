@@ -1,0 +1,41 @@
+{
+  "name": "sphinx",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sphinx - your neighbourhood, turned into riddles. OpenStreetMap + open-weight models.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "audit:contrast": "tsx scripts/audit-contrast.ts",
+    "check:safety": "tsx scripts/check-safety.ts",
+    "check:privacy": "tsx scripts/check-privacy.ts",
+    "check": "npm run typecheck && npm run check:safety && npm run audit:contrast && npm run check:vision && npm run check:notes && npm run build && npm run check:privacy && npm run check:claims",
+    "setup:ort": "node scripts/setup-ort.mjs",
+    "build:dataset": "tsx scripts/build-dataset.ts",
+    "train": "python scripts/train.py",
+    "eval": "tsx scripts/evaluate.ts",
+    "check:claims": "tsx scripts/check-claims.ts",
+    "build:vision": "tsx scripts/build-visual-index.ts",
+    "check:vision": "tsx scripts/check-vision.ts",
+    "check:notes": "tsx scripts/check-notes.ts",
+    "hunt": "tsx scripts/hunt.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
