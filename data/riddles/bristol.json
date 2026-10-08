@@ -1,0 +1,271 @@
+{
+  "id": "hunt-city-of-bristol-1791440302099",
+  "placeName": "City of Bristol",
+  "centre": {
+    "lat": 51.4430141,
+    "lon": -2.5816622
+  },
+  "radiusMetres": 1200,
+  "generator": "template-fallback",
+  "generatedAt": "2026-10-08T06:18:22.099Z",
+  "stops": [
+    {
+      "id": "node/2838155378",
+      "riddle": "I am small, flat, and written on. One of the dates on me is 1792.",
+      "fact": "A plaque. Its inscription reads: \"In a house on this site the first American Consulate in Great Britain was established in September 1792\"",
+      "clues": [
+        {
+          "text": "flat, and written on",
+          "source": "inscription"
+        },
+        {
+          "text": "One of the dates on me is 1792",
+          "source": "start_date"
+        }
+      ],
+      "visual": {
+        "id": "stone-plaque-on-wall",
+        "text": "a small weathered stone plaque mounted flat on a brick wall"
+      },
+      "category": "historic:memorial",
+      "sensitivity": "playful",
+      "lat": 51.4497877,
+      "lon": -2.5951575,
+      "name": "The First American Consulate",
+      "osmUrl": "https://www.openstreetmap.org/node/2838155378",
+      "frameId": "plaque-inscription"
+    },
+    {
+      "id": "node/1651039231",
+      "riddle": "I am blue, and I am about someone who lived here from 1679. I am small, flat, and permanent.",
+      "fact": "An English Heritage blue plaque, marking where Woodes Rogers lived (1679).",
+      "clues": [
+        {
+          "text": "I am blue",
+          "source": "memorial=blue_plaque / plaque=here_lived"
+        },
+        {
+          "text": "someone who lived here",
+          "source": "plaque=here_lived"
+        },
+        {
+          "text": "from 1679",
+          "source": "inscription"
+        }
+      ],
+      "visual": {
+        "id": "blue-plaque-on-wall",
+        "text": "a small blue enamel plaque fixed to a brick wall"
+      },
+      "category": "historic:memorial",
+      "sensitivity": "playful",
+      "lat": 51.4497531,
+      "lon": -2.5947213,
+      "name": "Woodes Rogers",
+      "osmUrl": "https://www.openstreetmap.org/node/1651039231",
+      "frameId": "blue-plaque-here-lived"
+    },
+    {
+      "id": "node/3774143446",
+      "riddle": "I am fed by a pipe you cannot see. I have never once asked to be looked at.",
+      "fact": "A fountain.",
+      "clues": [
+        {
+          "text": "fed by a pipe you cannot see",
+          "source": "amenity=fountain"
+        }
+      ],
+      "visual": {
+        "id": "stone-fountain-basin",
+        "text": "a weathered stone fountain basin with water"
+      },
+      "category": "amenity:fountain",
+      "sensitivity": "playful",
+      "lat": 51.4486582,
+      "lon": -2.587677,
+      "name": "",
+      "osmUrl": "https://www.openstreetmap.org/node/3774143446",
+      "frameId": "fountain"
+    },
+    {
+      "id": "way/229912363",
+      "riddle": "I am not alone. I was planted next to others on purpose, and I am still in line.",
+      "fact": "A row of trees planted deliberately.",
+      "clues": [
+        {
+          "text": "planted next to others on purpose, still in line",
+          "source": "natural=tree_row"
+        }
+      ],
+      "visual": {
+        "id": "row-of-trees",
+        "text": "a straight row of trees planted along a street"
+      },
+      "category": "natural:tree_row",
+      "sensitivity": "playful",
+      "lat": 51.4460523,
+      "lon": -2.5861797,
+      "name": "",
+      "osmUrl": "https://www.openstreetmap.org/way/229912363",
+      "frameId": "tree-row"
+    },
+    {
+      "id": "node/11244444108",
+      "riddle": "I am big and still, and I mark a spot rather than a thing. I am still where I was put.",
+      "fact": "A monument, marking Windmill Grinding Mill.",
+      "clues": [
+        {
+          "text": "I mark a spot rather than a thing",
+          "source": "historic=monument"
+        }
+      ],
+      "visual": {
+        "id": "tall-monument-column",
+        "text": "a tall stone monument or column standing in the open"
+      },
+      "category": "historic:monument",
+      "sensitivity": "playful",
+      "lat": 51.442318,
+      "lon": -2.5839992,
+      "name": "Windmill Grinding Mill",
+      "osmUrl": "https://www.openstreetmap.org/node/11244444108",
+      "frameId": "monument"
+    },
+    {
+      "id": "way/125606135",
+      "riddle": "My floor is grass, and nothing much gets built on it. Something gets repaired here every spring.",
+      "fact": "A playground with a grass surface, part of Victoria Park Play Area.",
+      "clues": [
+        {
+          "text": "My floor is grass",
+          "source": "surface"
+        }
+      ],
+      "visual": {
+        "id": "playground-equipment",
+        "text": "a playground with a slide and climbing frame"
+      },
+      "category": "leisure:playground",
+      "sensitivity": "playful",
+      "lat": 51.43993,
+      "lon": -2.5890654,
+      "name": "Victoria Park Play Area",
+      "osmUrl": "https://www.openstreetmap.org/way/125606135",
+      "frameId": "playground-surface"
+    },
+    {
+      "id": "node/11033830468",
+      "riddle": "I am a statue, and I am outdoors on purpose. I was not made to be indoors.",
+      "fact": "Public artwork - a statue. It has a Wikipedia article, so there is a longer story.",
+      "clues": [
+        {
+          "text": "I am a statue",
+          "source": "artwork_type"
+        }
+      ],
+      "visual": {
+        "id": "stone-figure",
+        "text": "a pale stone statue of a person"
+      },
+      "category": "tourism:artwork",
+      "sensitivity": "playful",
+      "lat": 51.4493108,
+      "lon": -2.5822161,
+      "name": "Isambard Brunel",
+      "osmUrl": "https://www.openstreetmap.org/node/11033830468",
+      "frameId": "artwork-type-only"
+    },
+    {
+      "id": "node/7258907634",
+      "riddle": "I was here to be drunk from. You had to push a handle.",
+      "fact": "A drinking fountain.",
+      "clues": [
+        {
+          "text": "I was here to be drunk from",
+          "source": "amenity=drinking_water"
+        }
+      ],
+      "visual": {
+        "id": "metal-drinking-fountain",
+        "text": "a metal drinking fountain with a small basin"
+      },
+      "category": "amenity:drinking_water",
+      "sensitivity": "playful",
+      "lat": 51.4493703,
+      "lon": -2.5807808,
+      "name": "",
+      "osmUrl": "https://www.openstreetmap.org/node/7258907634",
+      "frameId": "drinking-water"
+    },
+    {
+      "id": "node/2892455152",
+      "riddle": "Someone made me on purpose, and their name is on me. I am still outdoors, which was the point.",
+      "fact": "Public artwork by John Doubleday, a statue.",
+      "clues": [
+        {
+          "text": "made me on purpose",
+          "source": "artist_name"
+        },
+        {
+          "text": "their name is on me",
+          "source": "artist_name"
+        }
+      ],
+      "visual": {
+        "id": "stone-figure",
+        "text": "a pale stone statue of a person"
+      },
+      "category": "tourism:artwork",
+      "sensitivity": "playful",
+      "lat": 51.451526,
+      "lon": -2.5837233,
+      "name": "Isambard Kingdom Brunel",
+      "osmUrl": "https://www.openstreetmap.org/node/2892455152",
+      "frameId": "artwork-artist"
+    },
+    {
+      "id": "node/1885570902",
+      "riddle": "I am one of hundreds of me, all the same colour, all on walls like this one.",
+      "fact": "An Open Plaques scheme plaque. It reads: \"“Angel of St Philips” Miss Mabel Tribe lived in Dings House. She helped the sick and comforted the sad. A...\"",
+      "clues": [
+        {
+          "text": "one of hundreds of me, all the same colour",
+          "source": "openplaques:id"
+        }
+      ],
+      "visual": {
+        "id": "carved-stone-slab",
+        "text": "an upright carved stone slab with letters cut into it"
+      },
+      "category": "historic:memorial",
+      "sensitivity": "playful",
+      "lat": 51.4522574,
+      "lon": -2.575247,
+      "name": "Mabel Tribe",
+      "osmUrl": "https://www.openstreetmap.org/node/1885570902",
+      "frameId": "open-plaques-scheme"
+    },
+    {
+      "id": "way/371019930",
+      "riddle": "I am a mural, and I am outdoors on purpose. I was not made to be indoors.",
+      "fact": "Public artwork - a mural.",
+      "clues": [
+        {
+          "text": "I am a mural",
+          "source": "artwork_type"
+        }
+      ],
+      "visual": {
+        "id": "stone-figure",
+        "text": "a pale stone statue of a person"
+      },
+      "category": "tourism:artwork",
+      "sensitivity": "playful",
+      "lat": 51.4424255,
+      "lon": -2.5718175,
+      "name": "Bristol Uprising (Riots)",
+      "osmUrl": "https://www.openstreetmap.org/way/371019930",
+      "frameId": "artwork-type-only"
+    }
+  ]
+}
