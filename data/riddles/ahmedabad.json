@@ -1,0 +1,183 @@
+{
+  "id": "hunt-ahmedabad-1791607852479",
+  "placeName": "Ahmedabad",
+  "centre": {
+    "lat": 23.0215374,
+    "lon": 72.5800568
+  },
+  "radiusMetres": 2200,
+  "generator": "template-fallback",
+  "generatedAt": "2026-10-10T04:50:52.479Z",
+  "stops": [
+    {
+      "id": "node/12092227912",
+      "riddle": "I am stone, flat, and written on. One of the dates on me is 1956.",
+      "fact": "A stele. Its inscription reads: \"8 August 1956 In Memory of Martyrs of Mahagujarat Movement Year 1958\"",
+      "clues": [
+        {
+          "text": "I am stone",
+          "source": "material"
+        },
+        {
+          "text": "flat, and written on",
+          "source": "inscription"
+        },
+        {
+          "text": "One of the dates on me is 1956",
+          "source": "inscription"
+        }
+      ],
+      "visual": {
+        "id": "carved-stone-slab",
+        "text": "an upright carved stone slab with letters cut into it"
+      },
+      "category": "historic:memorial",
+      "sensitivity": "playful",
+      "lat": 23.0218041,
+      "lon": 72.579743,
+      "name": "Mahagujarat Shahid Smarak",
+      "osmUrl": "https://www.openstreetmap.org/node/12092227912",
+      "frameId": "plaque-inscription"
+    },
+    {
+      "id": "node/12092227896",
+      "riddle": "Someone cast me out of bronze, and their name is on me. I am still outdoors, which was the point.",
+      "fact": "Public artwork by Mahadev Kashinath Kolhatkar, a statue.",
+      "clues": [
+        {
+          "text": "cast me out of bronze",
+          "source": "material"
+        },
+        {
+          "text": "their name is on me",
+          "source": "artist_name"
+        }
+      ],
+      "visual": {
+        "id": "bronze-figure",
+        "text": "a green patinated bronze statue of a person"
+      },
+      "category": "tourism:artwork",
+      "sensitivity": "playful",
+      "lat": 23.0216455,
+      "lon": 72.5793844,
+      "name": "Lokmanya Tilak Statue",
+      "osmUrl": "https://www.openstreetmap.org/node/12092227896",
+      "frameId": "artwork-artist"
+    },
+    {
+      "id": "node/12092227897",
+      "riddle": "Someone carved me out of marble, and their name is on me. I am still outdoors, which was the point.",
+      "fact": "Public artwork by H. G. Mhatre, a statue.",
+      "clues": [
+        {
+          "text": "carved me out of marble",
+          "source": "material"
+        },
+        {
+          "text": "their name is on me",
+          "source": "artist_name"
+        }
+      ],
+      "visual": {
+        "id": "stone-figure",
+        "text": "a pale stone statue of a person"
+      },
+      "category": "tourism:artwork",
+      "sensitivity": "playful",
+      "lat": 23.0216418,
+      "lon": 72.5789186,
+      "name": "Queen Victoria statue canopy",
+      "osmUrl": "https://www.openstreetmap.org/node/12092227897",
+      "frameId": "artwork-artist"
+    },
+    {
+      "id": "node/12092227895",
+      "riddle": "I am fed by a pipe you cannot see. I have never once asked to be looked at.",
+      "fact": "A fountain.",
+      "clues": [
+        {
+          "text": "fed by a pipe you cannot see",
+          "source": "amenity=fountain"
+        }
+      ],
+      "visual": {
+        "id": "stone-fountain-basin",
+        "text": "a weathered stone fountain basin with water"
+      },
+      "category": "amenity:fountain",
+      "sensitivity": "playful",
+      "lat": 23.0216852,
+      "lon": 72.5785585,
+      "name": "Nanavatty Fountaion",
+      "osmUrl": "https://www.openstreetmap.org/node/12092227895",
+      "frameId": "fountain"
+    },
+    {
+      "id": "node/14067711781",
+      "riddle": "I was here to be drunk from. You had to push a handle.",
+      "fact": "A drinking fountain.",
+      "clues": [
+        {
+          "text": "I was here to be drunk from",
+          "source": "amenity=drinking_water"
+        }
+      ],
+      "visual": {
+        "id": "metal-drinking-fountain",
+        "text": "a metal drinking fountain with a small basin"
+      },
+      "category": "amenity:drinking_water",
+      "sensitivity": "playful",
+      "lat": 23.0235265,
+      "lon": 72.5870241,
+      "name": "",
+      "osmUrl": "https://www.openstreetmap.org/node/14067711781",
+      "frameId": "drinking-water"
+    },
+    {
+      "id": "node/4937816350",
+      "riddle": "I am big and still, and I mark a spot rather than a thing. I am still where I was put.",
+      "fact": "A monument, marking Amritavarshini Vav.",
+      "clues": [
+        {
+          "text": "I mark a spot rather than a thing",
+          "source": "historic=monument"
+        }
+      ],
+      "visual": {
+        "id": "tall-monument-column",
+        "text": "a tall stone monument or column standing in the open"
+      },
+      "category": "historic:monument",
+      "sensitivity": "playful",
+      "lat": 23.0246644,
+      "lon": 72.5971063,
+      "name": "Amritavarshini Vav",
+      "osmUrl": "https://www.openstreetmap.org/node/4937816350",
+      "frameId": "monument"
+    },
+    {
+      "id": "node/885244320",
+      "riddle": "I used to be a wall with a roof. What is left of me still stands in the right place.",
+      "fact": "Ruins, known as Panch Kua Dawaza.",
+      "clues": [
+        {
+          "text": "used to be a wall with a roof",
+          "source": "historic=ruins"
+        }
+      ],
+      "visual": {
+        "id": "stone-ruin-wall",
+        "text": "a crumbling stone wall with no roof"
+      },
+      "category": "historic:ruins",
+      "sensitivity": "playful",
+      "lat": 23.0269688,
+      "lon": 72.6001949,
+      "name": "Panch Kua Dawaza",
+      "osmUrl": "https://www.openstreetmap.org/node/885244320",
+      "frameId": "ruins"
+    }
+  ]
+}
