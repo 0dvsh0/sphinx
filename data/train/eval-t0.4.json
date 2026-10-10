@@ -1,0 +1,104 @@
+{
+  "evaluatedAt": "2026-10-08T12:20:46.925Z",
+  "rows": 120,
+  "metrics": {
+    "groundedness": {
+      "raw": 0.9958333333333333,
+      "shipped": 1,
+      "baseline": 1,
+      "winner": "tie"
+    },
+    "specificity": {
+      "raw": 0.85,
+      "shipped": 0.8416666666666667,
+      "baseline": 0.8333333333333334,
+      "winner": "model"
+    },
+    "detailCount": {
+      "raw": 1.35,
+      "shipped": 1.325,
+      "baseline": 1.35,
+      "winner": "baseline"
+    },
+    "variety": {
+      "raw": 0.9166666666666666,
+      "shipped": 0.9166666666666666,
+      "baseline": 0.875,
+      "winner": "model"
+    },
+    "wayfindingViolations": {
+      "raw": 0,
+      "shipped": 0,
+      "baseline": 0,
+      "winner": "tie"
+    },
+    "spoilerViolations": {
+      "raw": 1,
+      "shipped": 0,
+      "baseline": 0,
+      "winner": "tie"
+    },
+    "leakedCoords": {
+      "raw": 0,
+      "shipped": 0,
+      "baseline": 0,
+      "winner": "tie"
+    },
+    "medianWords": {
+      "raw": 17,
+      "shipped": 18,
+      "baseline": 18,
+      "winner": "tie"
+    },
+    "fallbackRate": {
+      "raw": 0,
+      "shipped": 0.016666666666666666,
+      "baseline": 0,
+      "winner": "baseline"
+    },
+    "latencyMs": {
+      "raw": 2402.05,
+      "shipped": 2402.05,
+      "baseline": 0,
+      "winner": "baseline"
+    },
+    "tokensPerRiddle": {
+      "raw": 48,
+      "shipped": 48,
+      "baseline": 0,
+      "winner": "baseline"
+    },
+    "costPerRiddle": {
+      "raw": 0.0000288,
+      "shipped": 0.0000288,
+      "baseline": 0,
+      "winner": "baseline"
+    }
+  },
+  "safety": [
+    {
+      "name": "No movement instructions in shipped output",
+      "ok": true
+    },
+    {
+      "name": "No movement instructions in baseline",
+      "ok": true
+    },
+    {
+      "name": "Shipped output names targets no more than baseline",
+      "ok": true
+    },
+    {
+      "name": "Shipped output leaks no coordinates",
+      "ok": true
+    },
+    {
+      "name": "Shipped groundness at least matches baseline",
+      "ok": true
+    },
+    {
+      "name": "The gate is load-bearing (rescues > 0, else it is untested)",
+      "ok": true
+    }
+  ]
+}
