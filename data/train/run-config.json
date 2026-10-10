@@ -1,0 +1,18 @@
+{
+  "base_model": "Qwen/Qwen3-8B",
+  "lora_rank": 32,
+  "learning_rate": 0.0002,
+  "epochs": 2,
+  "batch_size": 16,
+  "max_completion_tokens": 160,
+  "temperature": 0.4,
+  "seed": 0,
+  "max_train_rows": null,
+  "out": "data\\train\\gen-t0.4.jsonl",
+  "train_price_per_mtok": 0.44,
+  "sample_price_per_mtok": 0.6,
+  "prefill_price_per_mtok": 0.195,
+  "extra": {},
+  "modelPath": "tinker://ed8fee4f-ab46-5f2f-8d68-1c9a25b39f47:train:0/sampler_weights/lr0.0002_r32_e2_s0",
+  "trainedAt": "2026-10-08T12:20:48Z"
+}
