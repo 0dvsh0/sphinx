@@ -1,0 +1,106 @@
+{
+  "builtAt": "2026-10-08T10:33:54.059Z",
+  "systemPrompt": "You write two-line riddles about real places, for a walking treasure hunt played by children aged 8 to 12.\n\nYou are given the OpenStreetMap tags for one object. You must describe it without naming it.\n\nRules, in order of importance:\n1. Every claim must be traceable to a tag you were given. A child will walk up and check it.\n2. Never name the target. Naming it ends the game.\n3. Never give directions. No walking, turning, crossing, distances, or 'on the other side'.\n4. Two lines, then stop.\n5. Sober and physical. A war memorial gets respect, never a joke.\n6. Plain words. Reading age 8 to 12.\n\nAnswer with exactly two parts:\nRIDDLE: <two lines>\nFACT: <one line saying what this actually is>",
+  "cities": {
+    "Bristol": {
+      "candidates": 152,
+      "rows": 41,
+      "radius": 1600
+    },
+    "Freiburg": {
+      "candidates": 376,
+      "rows": 60,
+      "radius": 800
+    },
+    "Utrecht": {
+      "candidates": 149,
+      "rows": 55,
+      "radius": 800
+    },
+    "Ljubljana": {
+      "candidates": 166,
+      "rows": 68,
+      "radius": 800
+    },
+    "Wellington": {
+      "candidates": 142,
+      "rows": 21,
+      "radius": 800
+    },
+    "Portland": {
+      "candidates": 153,
+      "rows": 37,
+      "radius": 800
+    },
+    "Madison": {
+      "candidates": 84,
+      "rows": 22,
+      "radius": 1600
+    },
+    "Edinburgh": {
+      "candidates": 129,
+      "rows": 55,
+      "radius": 800
+    },
+    "Kraków": {
+      "candidates": 176,
+      "rows": 34,
+      "radius": 800
+    },
+    "Ghent": {
+      "candidates": 186,
+      "rows": 43,
+      "radius": 1600
+    },
+    "Valparaíso": {
+      "candidates": 61,
+      "rows": 14,
+      "radius": 1600
+    },
+    "Aix-en-Provence": {
+      "candidates": 166,
+      "rows": 14,
+      "radius": 1600
+    },
+    "Porto": {
+      "candidates": 175,
+      "rows": 68,
+      "radius": 800
+    },
+    "Bilbao": {
+      "candidates": 137,
+      "rows": 36,
+      "radius": 800
+    }
+  },
+  "dropped": {
+    "featureNotFound": 0,
+    "ungroundedNumbers": 8
+  },
+  "totals": {
+    "realObjects": 568,
+    "houseVoiceSeeds": 29,
+    "train": 477,
+    "heldout": 120
+  },
+  "categories": {
+    "tourism:artwork": 282,
+    "historic:memorial": 207,
+    "historic:monument": 24,
+    "amenity:drinking_water": 20,
+    "leisure:playground": 20,
+    "amenity:fountain": 17,
+    "natural:tree_row": 11,
+    "memorial:*": 8,
+    "historic:ruins": 5,
+    "amenity:place_of_worship": 3
+  },
+  "caveats": [
+    "Completion targets come from the template generator plus hand-written house-voice seeds. The",
+    "fine-tune is therefore learning a voice and a tag-to-description mapping, not inventing",
+    "riddles from nothing. Its measurable wins are COVERAGE on thin features and VARIETY over",
+    "identical template output - not raw poetic quality.",
+    "Held-out split is by OSM object. The same feature never appears in both files.",
+    "The house-voice seeds are never held out; they are teaching material."
+  ]
+}
