@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fapi\u002Fvision\u002Fmodels\u002F[...path]","\u002Fplay\u002F[huntId]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
