@@ -41,9 +41,6 @@ export default function Home() {
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-ink sm:text-xl">{app.name}</span>
-              <span className="hidden text-[10px] font-semibold tracking-wide text-ink-soft sm:block">
-                TOUCH GRASS · OPEN AI
-              </span>
             </div>
           </a>
 
@@ -191,12 +188,12 @@ export default function Home() {
 
           <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
             {/* Announcement Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-sand bg-paper-raised px-3.5 py-1.5 text-xs font-medium text-ink-soft shadow-xs">
+            {/* <div className="inline-flex items-center gap-2 rounded-full border border-sand bg-paper-raised px-3.5 py-1.5 text-xs font-medium text-ink-soft shadow-xs">
               <span className="flex h-2 w-2 rounded-full bg-found" />
               <span>Hacktoberfest 2026 AI Challenge</span>
               <span className="text-sand">&bull;</span>
               <span className="font-semibold text-ink">Touch Grass Theme</span>
-            </div>
+            </div> */}
 
             {/* Main Headline */}
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink sm:text-6xl md:text-7xl">
@@ -228,7 +225,7 @@ export default function Home() {
               >
                 <span>Play Sample Walk (Bristol)</span>
               </a>
-              <a
+              {/* <a
                 href="#demo-video"
                 className="flex min-h-tap-min w-full items-center justify-center gap-2 rounded-2xl px-6 text-sm font-semibold text-ink transition-colors duration-150 hover:text-stone-deep sm:w-auto"
               >
@@ -236,7 +233,7 @@ export default function Home() {
                   <path d="M8 5v14l11-7z" />
                 </svg>
                 <span>Watch 4-Min Film</span>
-              </a>
+              </a> */}
             </div>
 
             {/* Trust and Engineering Invariants Strip */}
