@@ -194,3 +194,14 @@ export const app = {
   pocketModeDelayMs: 20_000,
   maxRiddleWords: 30,
 } as const;
+
+/**
+ * Base path for deployments under a subpath (e.g. GitHub Pages at /sphinx).
+ */
+export const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.GITHUB_PAGES === "true" ? "/sphinx" : "");
+
+export function withBase(path: string): string {
+  if (!basePath || !path.startsWith("/")) return path;
+  return `${basePath}${path}`;
+}

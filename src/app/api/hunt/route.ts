@@ -26,7 +26,7 @@ import type { HuntArtifact } from "@/lib/riddle";
 export const runtime = "nodejs";
 // Never cached: building a hunt hits volunteer-run infrastructure, and the in-process caches in
 // lib/cache.ts already handle repeat requests within a single instance.
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 type RequestBody = {
   place?: string;

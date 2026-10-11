@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import type { HuntArtifact, SavedHunt } from "@/lib/riddle";
 import { listHunts, saveHunt } from "@/lib/offline/store";
-import { app } from "@/lib/config";
+import { app, withBase } from "@/lib/config";
 import { PrimaryAction } from "@/components/PrimaryAction";
 import { OsmAttribution } from "@/components/OsmAttribution";
 import { FoundIcon, SphinxMark } from "@/components/icons";
@@ -109,9 +110,9 @@ export function HuntBuilder() {
     <main className="flex min-h-dvh flex-col bg-paper px-6 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
       <header className="flex items-center justify-between gap-4">
         <h1 className="text-2xl font-semibold tracking-tight">Build a walk</h1>
-        <a href="/" className="text-quiet text-ink-soft underline underline-offset-2">
+        <Link href="/" className="text-quiet text-ink-soft underline underline-offset-2">
           Home
-        </a>
+        </Link>
       </header>
 
       <div className="flex flex-1 flex-col gap-6 py-8">
@@ -221,7 +222,7 @@ export function HuntBuilder() {
             <ul className="mt-2 flex flex-col gap-2">
               {existing.map((item) => (
                 <li key={item.id}>
-                  <a
+                  <Link
                     href={`/play/${item.id}`}
                     className="flex min-h-tap-min items-center justify-between rounded-xl border-2 border-stone px-4 text-ink hover:bg-sand/60"
                   >
@@ -229,7 +230,7 @@ export function HuntBuilder() {
                     <span className="text-xs text-ink-soft">
                       {item.stops.length} places{item.finishedAt ? " · done" : ""}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -255,7 +256,7 @@ export function HuntBuilder() {
           </button>
         )}
         {step === "saved" && saved && (
-          <PrimaryAction onClick={() => window.location.assign(`/play/${saved.id}`)}>
+          <PrimaryAction onClick={() => window.location.assign(withBase(`/play/${saved.id}`))}>
             Start walking
           </PrimaryAction>
         )}

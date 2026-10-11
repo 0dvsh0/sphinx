@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { OsmAttribution } from "@/components/OsmAttribution";
 import { InstallButton } from "@/components/InstallButton";
 import { StoreBadge } from "@/components/StoreBadge";
 import { SphinxMark } from "@/components/icons";
-import { app, distribution, hasStoreListings } from "@/lib/config";
+import { app, distribution, hasStoreListings, withBase } from "@/lib/config";
 
 /**
  * The demo riddle from live Bristol map data.
@@ -28,12 +29,12 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-sand/80 bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
           {/* Logo & Brand */}
-          <a
+          <Link
             href="/"
             className="flex items-center gap-3 transition-opacity duration-150 hover:opacity-85 focus-visible:outline-2 focus-visible:outline-ink"
           >
             <img
-              src="/icon.svg"
+              src={withBase("/icon.svg")}
               alt="Sphinx Logo"
               width={34}
               height={34}
@@ -42,7 +43,7 @@ export default function Home() {
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-ink sm:text-xl">{app.name}</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden items-center gap-6 md:flex" aria-label="Main Navigation">
@@ -70,29 +71,29 @@ export default function Home() {
             >
               Safety & Privacy
             </a>
-            <a
+            <Link
               href="/parent"
               className="text-sm font-medium text-ink-soft transition-colors duration-150 hover:text-ink"
             >
               Parent Guide
-            </a>
+            </Link>
           </nav>
 
           {/* Action CTAs */}
           <div className="hidden items-center gap-3 md:flex">
-            <a
+            <Link
               href="/play/demo"
               className="flex min-h-10 items-center justify-center rounded-xl border border-sand bg-paper-raised px-4 text-xs font-semibold text-ink shadow-xs transition-colors duration-150 hover:bg-sand/40 active:translate-y-px"
             >
               Play Sample Walk
-            </a>
-            <a
+            </Link>
+            <Link
               href="/build"
               className="flex min-h-10 items-center justify-center gap-1.5 rounded-xl bg-stone-deep px-4 text-xs font-semibold text-paper shadow-sm transition-colors duration-150 hover:bg-ink active:translate-y-px"
             >
               Build Walk
               <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,26 +148,26 @@ export default function Home() {
               >
                 Safety & Privacy
               </a>
-              <a
+              <Link
                 href="/parent"
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-1.5 text-sm font-medium text-ink"
               >
                 Parent Dashboard
-              </a>
+              </Link>
               <div className="mt-2 flex flex-col gap-2 pt-2 border-t border-sand">
-                <a
+                <Link
                   href="/build"
                   className="flex min-h-tap-min items-center justify-center rounded-xl bg-stone-deep text-action text-paper"
                 >
                   Build a Walk
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/play/demo"
                   className="flex min-h-tap-min items-center justify-center rounded-xl border border-sand bg-paper text-quiet text-ink"
                 >
                   Play Bristol Sample Walk
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -212,19 +213,19 @@ export default function Home() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row sm:gap-4">
-              <a
+              <Link
                 href="/build"
                 className="flex min-h-tap-primary w-full items-center justify-center gap-2 rounded-2xl bg-stone-deep px-8 text-action text-paper shadow-md transition-all duration-150 hover:bg-ink hover:shadow-lg active:translate-y-px sm:w-auto"
               >
                 <span>Build a Walk Near You</span>
                 <span aria-hidden="true">&rarr;</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/play/demo"
                 className="flex min-h-tap-primary w-full items-center justify-center gap-2 rounded-2xl border-2 border-stone bg-paper-raised px-8 text-action text-ink transition-colors duration-150 hover:bg-sand/60 active:translate-y-px sm:w-auto"
               >
                 <span>Play Sample Walk (Bristol)</span>
-              </a>
+              </Link>
               {/* <a
                 href="#demo-video"
                 className="flex min-h-tap-min w-full items-center justify-center gap-2 rounded-2xl px-6 text-sm font-semibold text-ink transition-colors duration-150 hover:text-stone-deep sm:w-auto"
@@ -331,7 +332,7 @@ export default function Home() {
                   /* Video Facade: 0 Network Calls on Initial Load, Plays on Demand */
                   <div className="group relative flex h-full w-full items-center justify-center">
                     <img
-                      src="/video-poster.jpg"
+                      src={withBase("/video-poster.jpg")}
                       alt="Sphinx Walkthrough Demo Video Thumbnail"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-102"
                       loading="lazy"
@@ -634,12 +635,12 @@ export default function Home() {
                   <li>&bull; No accounts, no logins, and zero advertising cookies.</li>
                   <li>&bull; No remote fonts, analytics, or third-party tracking scripts.</li>
                 </ul>
-                <a
+                <Link
                   href="/privacy"
                   className="mt-4 inline-flex items-center text-xs font-semibold text-stone-deep underline underline-offset-4 hover:text-ink"
                 >
                   Read the verifiable privacy audit &rarr;
-                </a>
+                </Link>
               </div>
 
               {/* Physical Safety Pillar */}
@@ -657,12 +658,12 @@ export default function Home() {
                   <li>&bull; Target objects must be on public footpaths, never private land.</li>
                   <li>&bull; Built-in safety script protects against stranger approaches.</li>
                 </ul>
-                <a
+                <Link
                   href="/parent"
                   className="mt-4 inline-flex items-center text-xs font-semibold text-stone-deep underline underline-offset-4 hover:text-ink"
                 >
                   View Parent Safety Guide &rarr;
-                </a>
+                </Link>
               </div>
 
               {/* Anti-Engagement Pillar */}
@@ -800,19 +801,19 @@ export default function Home() {
               Start with the baked Bristol demo hunt or build a live walk around your own street in seconds.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
+              <Link
                 href="/build"
                 className="flex min-h-tap-primary w-full items-center justify-center gap-2 rounded-2xl bg-stone-deep px-8 text-action text-paper shadow-md transition-colors duration-150 hover:bg-ink sm:w-auto"
               >
                 <span>Build a Walk Near You</span>
                 <span aria-hidden="true">&rarr;</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/play/demo"
                 className="flex min-h-tap-primary w-full items-center justify-center rounded-2xl border-2 border-stone bg-paper-raised px-8 text-action text-ink transition-colors duration-150 hover:bg-sand/60 sm:w-auto"
               >
                 Play Bristol Demo Walk
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -827,7 +828,7 @@ export default function Home() {
             {/* Brand column */}
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <div className="flex items-center gap-2">
-                <img src="/icon.svg" alt="" width={24} height={24} className="h-6 w-6 opacity-90" />
+                <img src={withBase("/icon.svg")} alt="" width={24} height={24} className="h-6 w-6 opacity-90" />
                 <span className="font-bold tracking-tight text-ink">{app.name}</span>
               </div>
               <p className="mt-2 max-w-xs text-xs text-ink-soft">{app.tagline}</p>
@@ -838,10 +839,10 @@ export default function Home() {
 
             {/* Links column */}
             <div className="flex flex-wrap justify-center gap-8 text-xs font-medium text-ink">
-              <a href="/build" className="hover:underline">Build Walk</a>
-              <a href="/play/demo" className="hover:underline">Demo Walk</a>
-              <a href="/parent" className="hover:underline">Parent Panel</a>
-              <a href="/privacy" className="hover:underline">Privacy Note</a>
+              <Link href="/build" className="hover:underline">Build Walk</Link>
+              <Link href="/play/demo" className="hover:underline">Demo Walk</Link>
+              <Link href="/parent" className="hover:underline">Parent Panel</Link>
+              <Link href="/privacy" className="hover:underline">Privacy Note</Link>
               <a href={YOUTUBE_URL} target="_blank" rel="noreferrer noopener" className="hover:underline">
                 YouTube Walkthrough
               </a>

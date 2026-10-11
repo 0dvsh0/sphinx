@@ -8,6 +8,15 @@ import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistratio
  * for a server to render. That is the point, not a limitation: the hunt was fetched once at build
  * time and everything after that is local.
  */
+export function generateStaticParams() {
+  return [
+    { huntId: "demo" },
+    { huntId: "bristol" },
+    { huntId: "ahmedabad" },
+    { huntId: "madison" },
+  ];
+}
+
 export default async function PlayHuntPage({ params }: { params: Promise<{ huntId: string }> }) {
   const { huntId } = await params;
 

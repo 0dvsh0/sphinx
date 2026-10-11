@@ -4,7 +4,11 @@ import { draftNote } from "@/lib/notes/draft";
 import type { HuntStop } from "@/lib/riddle";
 
 export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
+
+export async function GET() {
+  return NextResponse.json({ status: "static-export" });
+}
 
 /**
  * Files an OpenStreetMap Note on a child's behalf - after a person has read and agreed to it.

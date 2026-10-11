@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { modelFileUrl, ALLOWED_MODEL_FILES, type AllowedModelFile } from "@/lib/vision/model-files";
 
 export const runtime = "nodejs";
+export const dynamic = "force-static";
 
 /**
  * Proxies the photo-model weights from Hugging Face, server-side.
@@ -20,10 +21,20 @@ export const runtime = "nodejs";
  * arbitrary. See ALLOWED_MODEL_FILES.
  */
 
+export function generateStaticParams() {
+  return ALLOWED_MODEL_FILES.map((file) => ({
+    path: file.split("/"),
+  }));
+}
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ path: string[] }> },
 ) {
+  if (process.env.GITHUB_PAGES === "true") {
+    return NextResponse.json({ status: "static-stub" });
+  }
+
   const { path } = await params;
   const requested = path.join("/");
 

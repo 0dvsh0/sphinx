@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { SavedHunt } from "@/lib/riddle";
 import { advanceHunt, getHunt } from "@/lib/offline/store";
 import { RiddleScreen } from "@/components/RiddleScreen";
@@ -187,12 +188,12 @@ export function SavedHuntPlayer({ huntId }: { huntId: string }) {
         detail={`You found ${hunt.stops.length} places in ${hunt.placeName}. Every one of them is really there - the map says so.`}
       >
         <PrimaryAction onClick={() => void goTo(0, false, "intro")}>Walk it again</PrimaryAction>
-        <a
+        <Link
           href="/build"
           className="flex min-h-tap-min w-full items-center justify-center rounded-2xl border-2 border-stone px-6 text-quiet text-ink hover:bg-sand/60"
         >
           Build a different walk
-        </a>
+        </Link>
       </Centred>
     );
   }
