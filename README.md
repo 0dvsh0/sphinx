@@ -4,6 +4,7 @@
 
 **Your neighbourhood, turned into riddles.**
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-0dvsh0.github.io%2Fsphinx-success?style=flat-square&logo=githubpages)](https://0dvsh0.github.io/sphinx/)
 [![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest%202026-Touch%20Grass-2ea44f?style=flat-square)](https://dev.to/challenges/hacktoberfest-week1-2026-10-05)
 [![Category](https://img.shields.io/badge/Category-Best%20Use%20of%20Tinker-blue?style=flat-square)](https://tinker.thinkingmachines.ai)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
@@ -19,7 +20,7 @@
 *You walk to find each one. An on-device vision model checks your photo without uploading a byte.*  
 *When something is missing from the map, the player's report goes back to OpenStreetMap.*
 
-[Watch Video Walkthrough (YouTube)](https://youtu.be/5VDXL1FvSP8) • [Live Demo Walk](#running-it) • [The Twist: "It's Gone"](#its-gone--the-map-gets-fixed) • [Safety Charter](#critical-safety-for-children) • [Tinker Fine-Tune](#fine-tuning-a-riddle-writer-with-tinker) • [Verification Suites](#automated-verification-suites)
+**[🌐 Play Live Demo](https://0dvsh0.github.io/sphinx/)** • [Watch Video Walkthrough (YouTube)](https://youtu.be/5VDXL1FvSP8) • [The Twist: "It's Gone"](#its-gone--the-map-gets-fixed) • [Safety Charter](#critical-safety-for-children) • [Tinker Fine-Tune](#fine-tuning-a-riddle-writer-with-tinker) • [Verification Suites](#automated-verification-suites)
 
 </div>
 
