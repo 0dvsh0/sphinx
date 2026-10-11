@@ -21,7 +21,8 @@
     "build:vision": "tsx scripts/build-visual-index.ts",
     "check:vision": "tsx scripts/check-vision.ts",
     "check:notes": "tsx scripts/check-notes.ts",
-    "hunt": "tsx scripts/hunt.ts"
+    "hunt": "tsx scripts/hunt.ts",
+    "render:post": "node docs/post/render-images.mjs && python docs/post/crop.py"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.1",

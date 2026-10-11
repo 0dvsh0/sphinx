@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![Sphinx — your neighbourhood, turned into riddles](public/post/cover.png)
+
 **Your neighbourhood, turned into riddles.**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-0dvsh0.github.io%2Fsphinx-success?style=flat-square&logo=githubpages)](https://0dvsh0.github.io/sphinx/)

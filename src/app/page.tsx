@@ -297,7 +297,7 @@ export default function Home() {
                   <span>Walk to destination outdoors</span>
                 </div>
                 <div className="flex items-center gap-2 text-ink-soft">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-found font-mono text-[10px] text-paper font-bold">&check;</span>
+                  {/* <span className="flex h-5 w-5 items-center justify-center rounded-full bg-found font-mono text-[10px] text-paper font-bold">&check;</span> */}
                   <span className="font-medium text-ink">Fact revealed locally</span>
                 </div>
               </div>
